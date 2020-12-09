@@ -10,14 +10,14 @@ for j2  = 1:j
         
         %Sea Level
         xsm = [s(j2),(nx-p)*dx];
-        zsm = [Zp(j2),Zp(j2)];
-        fill([xsm,(nx-p)*dx,(nx-p)*dx,s(j2),s(j2)],[zsm,Zp(j2),-x(end),-s(j2),s(j2)],...
+        zsm = [Z(j2),Z(j2)];
+        fill([xsm,(nx-p)*dx,(nx-p)*dx,s(j2),s(j2)],[zsm,Z(j2),-x(end),-s(j2),s(j2)],...
             [0.4700    0.8100    0.9400],'EdgeColor','None');
         hold on       
         
         %Delta Fill
         xdelta=[x,x(end),-r(j2)];
-        zdelta=[diff(j2,:),-x(end),r(j2)];
+        zdelta=[di(j2,:),-x(end),r(j2)];
         fill(xdelta,zdelta,'y');
 
         %Shelf fill
